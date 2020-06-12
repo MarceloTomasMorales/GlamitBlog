@@ -32,7 +32,7 @@
                     <label for="body_Update" class="col-md-4 col-form-label text-md-right">{{ __('Cuerpo') }}</label>
 
                     <div class="col-md-6">
-                        <input id="body_Update" type="text" class="form-control @error('body') is-invalid @enderror" name="body_Update">
+                        <textarea class="form-control @error('body') is-invalid @enderror" rows="5" id="body_Update" name="body_Update" required></textarea>
 
                         @error('body')
                             <span class="invalid-feedback" role="alert">

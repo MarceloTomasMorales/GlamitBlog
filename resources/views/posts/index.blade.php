@@ -44,35 +44,38 @@
         <p class="alert {{ Session::get('alert-class') }}">{{ Session::get('message') }}</p>
     @endif
 <div class="row justify-content-center">
+
     <div class="col-md-8">
-        <!-- Tabla que muestra los post de los usuarios con sus opciones para borrar y actualizar -->
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col"  style="display:none;">#</th>
-                    <th scope="col">Titulo</th>
-                    <th scope="col">Cuerpo</th>
-                    <th scope="col">Imagen</th>
-                    <th id="opcionesTHead"><em class="fa fa-cog"></em></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach($posts as $post)
-                <tr>
-                    <td class="id" scope="row" style="display:none;">{{ $post->id }}</td>
-                    <td class="title" scope="row">{{ $post->title }}</td>
-                    <td class="body">{{ $post->body }}</td>
-                    <td class="image"><img src="{{ asset($post->image) }}" style="width: 200px !important;" alt=""></td>
-                    <td>
-                        <div class="btn-group">
-                            <button type="button" data-toggle="modal" data-target="#modalUpdate" class="btn btn-primary" onclick="editarPost(this)">Editar<i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                            <button type="button" data-toggle="modal" data-target="#modalDelete" class="btn btn-danger" onclick="borrarPost('{{$post->id}}')" >Eliminar<i class="fa fa-trash" aria-hidden="true"></i> </button>
-                        </div>
-                    </td>
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
+        <div class="table-responsive">
+            <!-- Tabla que muestra los post de los usuarios con sus opciones para borrar y actualizar -->
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col"  style="display:none;">#</th>
+                        <th scope="col">Titulo</th>
+                        <th scope="col">Cuerpo</th>
+                        <th scope="col">Imagen</th>
+                        <th id="opcionesTHead"><em class="fa fa-cog"></em></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($posts as $post)
+                    <tr>
+                        <td class="id text-center align-middle" scope="row" style="display:none;">{{ $post->id }}</td>
+                        <td class="title text-center align-middle" scope="row">{{ $post->title }}</td>
+                        <td class="body text-center align-middle">{{ $post->body }}</td>
+                        <td class="image text-center align-middle"><img src="{{ asset($post->image) }}" style="width: 200px !important;" alt=""></td>
+                        <td class="text-center align-middle">
+                            <div class="btn-group">
+                                <button type="button" data-toggle="modal" data-target="#modalUpdate" class="btn btn-primary" onclick="editarPost(this)">Editar<i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                <button type="button" data-toggle="modal" data-target="#modalDelete" class="btn btn-danger" onclick="borrarPost('{{$post->id}}')" >Eliminar<i class="fa fa-trash" aria-hidden="true"></i> </button>
+                            </div>
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <!-- Se incluye el modal para modificar -->
