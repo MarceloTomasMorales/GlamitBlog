@@ -1,0 +1,21 @@
+div.card-comments{
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+}
+.card-comments.hide{
+    display: none;
+}
+#like-button:hover{
+  background: green;
+  border-radius: 15px;
+}
+.like-post img{
+  color: #38c172 !important;
+  background-color: #38c172 !important;
+  border-radius: 15px;
+}
+div.card{
+  margin-bottom: 10px !important;
+}
