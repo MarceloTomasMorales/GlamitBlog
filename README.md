@@ -30,7 +30,7 @@ Módulos de Composer utilizados
 - Popper
 - Font-awesome
 
-### Instrucciones
+## Instrucciones
 En la carpeta raiz del proyecto ejecutar el siguiente comando
 - php artisan migrate (crea las tablas nesecarias de la aplicacion)
 - php artisan db:seed --class=UserSeeder (inyecta las tablas con los datos necesarios)
@@ -39,7 +39,7 @@ En la carpeta raiz del proyecto ejecutar el siguiente comando
 - php artisan db:seed --class=AdminSeeder (Inyecta un nuevo Administrador)
 - php artisan db:seed --class=UsuarioSeeder (Inyecta un nuevo Usuario)
 
-Las cuentas creadas con los comandos anteriores tienen como contraseña: password
+Las cuentas creadas con los comandos anteriores tienen como contraseña: **password**
 
 Por default, crea dos usuarios:
 - Admin.
